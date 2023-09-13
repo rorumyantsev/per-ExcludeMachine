@@ -23,15 +23,15 @@ FILE_BUFFER_ALL = io.BytesIO()
 FILE_BUFFER_EXC = io.BytesIO()
 
 SDD_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/sdd.json"
-sdd_geometry = json.loads(open('sdd.json').read())
+sdd_geometry = json.loads(open('per-SDD.geojson.json').read())
 sdd_polygon: Polygon = shapely.geometry.shape(sdd_geometry)
 
 NDD_NEAR_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/ndd_near.json"
-ndd_near_geometry = json.loads(open('ndd_near.json').read())
+ndd_near_geometry = json.loads(open('NDD_close.geojson').read())
 ndd_near_polygon: Polygon = shapely.geometry.shape(ndd_near_geometry)
 
 NDD_FAR_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/ndd_far.json"
-ndd_far_geometry = json.loads(open('ndd_far.json').read())
+ndd_far_geometry = json.loads(open('NDD_far.geojson').read())
 ndd_far_polygon: Polygon = shapely.geometry.shape(ndd_far_geometry)
 
 
