@@ -23,7 +23,7 @@ FILE_BUFFER_ALL = io.BytesIO()
 FILE_BUFFER_EXC = io.BytesIO()
 
 SDD_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/sdd.json"
-sdd_geometry = json.loads(open('per-SDD.geojson.json').read())
+sdd_geometry = json.loads(open('Per-SDD.geojson.json').read())
 sdd_polygon: Polygon = shapely.geometry.shape(sdd_geometry)
 
 NDD_NEAR_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/ndd_near.json"
