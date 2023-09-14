@@ -22,15 +22,15 @@ API_URL = st.secrets["API_URL"]
 FILE_BUFFER_ALL = io.BytesIO()
 FILE_BUFFER_EXC = io.BytesIO()
 
-SDD_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/sdd.json"
+SDD_ZONE_LINK = r"https://github.com/rorumyantsev/per-ExcludeMachine/blob/658e5d34442a8bf5c1cceedf74dae52b4ffa4ea7/Per-SDD.geojson.json"
 sdd_geometry = json.loads(open('Per-SDD.geojson.json').read())
 sdd_polygon: Polygon = shapely.geometry.shape(sdd_geometry)
 
-NDD_NEAR_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/ndd_near.json"
+NDD_NEAR_ZONE_LINK = r"https://github.com/rorumyantsev/per-ExcludeMachine/blob/b93425f9c8485b477ce19e2403e573c907b64ebe/NDD_close.geojson"
 ndd_near_geometry = json.loads(open('NDD_close.geojson').read())
 ndd_near_polygon: Polygon = shapely.geometry.shape(ndd_near_geometry)
 
-NDD_FAR_ZONE_LINK = r"https://raw.githubusercontent.com/SC-V/ExcludeMachine/main/ndd_far.json"
+NDD_FAR_ZONE_LINK = r"https://github.com/rorumyantsev/per-ExcludeMachine/blob/69341bae93c795ad8c39216a36a5fb514d3801c8/NDD_far.geojson"
 ndd_far_geometry = json.loads(open('NDD_far.geojson').read())
 ndd_far_polygon: Polygon = shapely.geometry.shape(ndd_far_geometry)
 
